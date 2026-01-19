@@ -1,9 +1,21 @@
 "use client";
 
 const songs = [
-  { title: "Waalian", line: "Some feelings feel calm and deep 💗" },
-  { title: "Lag Jaa Gale", line: "Because closeness matters 🤍" },
-  { title: "Billionera", line: "When emotions say more than words 💞" }
+  {
+    title: "Tere liye mai mandir jaau",
+    line: "Ek feel jo dil se nikalti hai 💗",
+    link: "https://open.spotify.com/track/3gixnmepHSsyAuho34rprN?si=Pm3ViZidTayd73I-vGCAYQ"
+  },
+  {
+    title: "Ehsaas",
+    line: "Bas tumhara ehsaas hi kaafi hai 🤍",
+    link: "https://open.spotify.com/track/5PetOhEX9N0oyBB0Keqobv?si=_I6Q1MvrQveIdHCCSU3R2Q"
+  },
+  {
+    title: "Barbaad",
+    line: "Pyaar me thoda sa pagalpan bhi zaroori hai 💞",
+    link: "https://open.spotify.com/track/7Csa4PStpuYIfUqNMKQ4V8?si=YXmfjx-xTeuxrP_fnWdw5A"
+  }
 ];
 
 export default function SongPage() {
@@ -11,7 +23,7 @@ export default function SongPage() {
     <div className="wrap">
       <div className="card">
         <h1>For Vaishnavi ji 🎶</h1>
-        <p className="small">Just some songs that feel like you 💗</p>
+        <p className="small">Tap & open in Spotify 💗</p>
 
         <div className="hr" />
 
@@ -25,8 +37,17 @@ export default function SongPage() {
               marginBottom: 10
             }}
           >
-            <b>{s.title}</b>
-            <p style={{ margin: "6px 0 0" }}>{s.line}</p>
+            <b style={{ fontSize: 16 }}>{s.title}</b>
+            <p style={{ margin: "6px 0 10px" }}>{s.line}</p>
+
+            <a
+              className="linkBtn"
+              href={s.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open on Spotify ▶️
+            </a>
           </div>
         ))}
 
